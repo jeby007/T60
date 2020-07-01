@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>T60首页</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="flashDiv"></div>
+
+    <script type="text/javascript">
+			//定义全局静态资源地址
+      var staticWebSiteURL = "<%= BASE_URL %>static/";
+      var publicStaticPtah = "<%= BASE_URL %>static/material";
+
+      /**
+      *app获取token回调函数
+      */
+      var getTokenCallBack = function(token){
+
+       }
+       /**
+      *处理app的相机开启方法回调函数
+      */
+      var getCanOpenCameraCallBack = function(result){
+
+       }
+      /**
+      *ap跳转下单页，关闭页面后 返回我们页面回调函数
+      */
+      var goToOrderCallBack = function(){
+
+       }
+      /**
+      *ap跳转H5页，关闭页面后 返回我们页面回调函数
+      */
+      var goToH5CallBack = function(params){
+
+       }
+      /**
+      *ap跳转去修改订单页面，重新选配
+      */
+      var goToUpdateOrder = function(orderId){
+        alert('拿到orderId' + orderId)
+         window.router.replace({ name: 'optionalCar', query: { orderId: orderId }})
+       }
+
+     /* // H5 plus事件处理
+      function plusReady(){
+        // 获取所有Webview窗口
+       alert(22)
+      }
+      if(window.plus){
+        plusReady();
+      }else{
+        alert(1)
+        document.addEventListener('plusready', plusReady, false);
+      }*/
+        </script>
+
+
+
+
+    <script type="text/javascript" src="<%= BASE_URL %>static/js/mui.min.js"></script>
+        <script type="text/javascript" src="<%= BASE_URL %>static/js/mui.picker.all.js"></script>
+        <link type="text/css" rel="stylesheet" href="<%= BASE_URL %>static/js/mui.css"/>
+        <link type="text/css" rel="stylesheet" href="<%= BASE_URL %>static/js/mui.picker.all.css"/>
+	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script type="text/javascript" src="<%= BASE_URL %>static/js/jquery-1.11.3.min.js"></script>
+	<script>if (window.module) module = window.module;</script>
+
+    <script type="text/javascript" src="<%= BASE_URL %>static/js/threeOptionalFunction.js"></script>
+    <script src="https://webapi.amap.com/maps?v=1.4.12&key=368471342856c43cf9342a3db0b1f85d&plugin=AMap.CitySearch"></script>
+    <script type="text/javascript">
+      //禁掉系统滚动条
+      document.documentElement.style.overflowY = 'hidden'
+    </script>
+<div style="display:none">
+</div>
+  </body>
+</html>
